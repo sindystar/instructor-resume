@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+  background:linear-gradient(-45deg,#e1f6fb, rgb(192,213,255));
+  width: 100%;
+  height: 100vh;
+}
+
+.hidden {  
+  position: absolute;
+  top : -99999px;
+  opacity: 0;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+fieldset {
+border: none;
+}
+// table {
+// 	border-collapse: collapse;
+// }
+table,
+th,
+td {
+border-collapse: collapse;
+}
+.h {
+position: absolute;
+top: -99999px;
+opacity: 0;
+}
+textarea {
+resize: none;
+}

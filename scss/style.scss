@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+  background:linear-gradient(-45deg,#e1f6fb, rgb(192,213,255));
+  width: 100%;
+  height: 100vh;
+}
+
+.hidden {  
+  position: absolute;
+  top : -99999px;
+  opacity: 0;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+fieldset {
+border: none;
+}
+// table {
+// 	border-collapse: collapse;
+// }
+table,
+th,
+td {
+border-collapse: collapse;
+}
+.h {
+position: absolute;
+top: -99999px;
+opacity: 0;
+}
+textarea {
+resize: none;
+}
+
+
+  .wrap {
+    width: 400px;
+    padding: 50px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(173, 189, 193, 0.4);
+
+  }
+  section .menu .menuSide::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .wrap {
+    .menu {
+      .Coding_Manual {
+        position: relative;
+        // position: absolute;      
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-top: 0px;
+        float: right;// padding: 10px;
+        opacity: 0.5;
+        transition: 0.3s;
+        i {
+          position: relative;
+          float: right;
+          font-size: 20px;
+          color: #333;
+        }
+        &::before {
+          content: 'Coding_Manual';
+          display: block;
+          font-family: 'Lato', sans-serif;
+          font-size: 12px;
+          font-weight: 700;
+          position: absolute;
+          top: 8px;
+          transform: translatey(-30px);
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:hover {
+          color: 333;
+          opacity: 1;
+          // transform: scale(1.2);
+          &::before {
+            opacity: 1;
+          }
+        }
+      }   
+    }
+
+    .menuSide{
+      position: relative;
+      width: 300px;
+      height:150px;
+      background: lightslategray;
+      opacity: 0.5;
+      position: fixed;
+      top: -200px;
+      // left: -200px;
+      transition: 0.5s;
+      &.on {
+        top: 235px;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        li{
+          width: 100%;
+          >a {
+            position: relative;
+            display: block;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            color: #fff;
+            text-indent: 10px;
+            padding-left: 30px;
+            padding-top: 10px;
+            transition: 0.5s;
+            &:hover {
+              color:blue;
+              
+            }            
+          }          
+        }
+      }      
+    }
+    a {
+      span {
+        i{
+          position: relative;
+          display: block;
+          width: 20px;
+          height: 20px;
+          font-size: 20px;
+          color: #333;
+          opacity: 0.5;
+          margin-bottom: 30px;
+          float: left;
+          transition: 0.5s;
+          &:hover {
+            color: #333;
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+        
+      }
+    }
+    
+
+    
+    .profile {
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 300px;
+        height: 450px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background :no-repept center/cover;
+        transition: 0.5s;
+        filter: grayscale(1);
+        cursor: pointer;
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+      h1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+      >h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 30px;
+      }
+      .btnView {
+        display: block;
+        width: 150px;
+        height: 30px;
+        margin: 0 auto;
+        border-radius: 16px;
+        font-size: 14px;
+        line-height: 30;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        background: #2E64FE;
+        color: #ddd;
+        margin-bottom: 20px;
+      }
+    }
+
+    .contact {
+      width: 100%;
+      margin-bottom: 5px;
+      li{
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0px;
+        &:nth-of-type(4) {
+          border-bottom: none;
+        }
+        a {
+          width: 100%;
+          
+          >i{
+          width: 20%;
+          text-align: center;
+          font-size: 14px;
+          color: #555;
+          transition: 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            color: #2E64FE;
+            transform: scale(1.2);
+          }         
+        }
+        >span {
+          padding-left: 35px;
+          font-family: 'Lato', sans-serif;
+          color: #555;
+          font-weight: 400;
+          font-size: 12px;
+          }
+        }      
+      }
+    }
+  }
